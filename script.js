@@ -1,46 +1,46 @@
 // function that returns random choice from computer OK
 function computerPlay () {
-	const choicesArray = ['rock', 'paper', 'scissors'];
-	const computerSelection = choicesArray[(Math.random() * choicesArray.length) | 0];
-	return(computerSelection);
+  const choicesArray = ['rock', 'paper', 'scissors'];
+  const computerSelection = choicesArray[(Math.random() * choicesArray.length) | 0];
+  return(computerSelection);
 }
 
 // const playerSelection = 'rock';
 // let computerSelection = computerPlay();
 
 function playRound(playerSelection, computerSelection) {
-	playerSelection = playerSelection.toLowerCase();
-	let result;
+  playerSelection = playerSelection.toLowerCase();
+  let result;
 
-	console.log(`You chose : ${playerSelection}`);
-	console.log(`Computer chose : ${computerSelection}`);
+  console.log(`You chose : ${playerSelection}`);
+  console.log(`Computer chose : ${computerSelection}`);
 
-	if (playerSelection === computerSelection) {
-		result = `It's a tie !`
-	}
-	else if (playerSelection === 'rock') {
-		if (computerSelection === 'paper')
-			result = `Computer wins ! ${computerSelection} beats ${playerSelection}`;
-		else
-			result = `You win ! ${playerSelection} beats ${computerSelection}`;
-	}
-	else if (playerSelection === 'paper') {
-		if (computerSelection === 'scissors')
-			result = `Computer wins ! ${computerSelection} beats ${playerSelection}`;
-		else
-			result = `You win ! ${playerSelection} beats ${computerSelection}`;
-	}
-	else if (playerSelection === 'scissors') {
-		if (computerSelection === 'rock')
-			result = `Computer wins ! ${computerSelection} beats ${playerSelection}`;
-		else
-			result = `You win ! ${playerSelection} beats ${computerSelection}`;
-	} else result = `${playerSelection} is not a valid choice.`
+  if (playerSelection === computerSelection) {
+    result = `It's a tie !`
+  }
+  else if (playerSelection === 'rock') {
+    if (computerSelection === 'paper')
+      result = `Computer wins ! ${computerSelection} beats ${playerSelection}`;
+    else
+      result = `You win ! ${playerSelection} beats ${computerSelection}`;
+  }
+  else if (playerSelection === 'paper') {
+    if (computerSelection === 'scissors')
+      result = `Computer wins ! ${computerSelection} beats ${playerSelection}`;
+    else
+      result = `You win ! ${playerSelection} beats ${computerSelection}`;
+  }
+  else if (playerSelection === 'scissors') {
+    if (computerSelection === 'rock')
+      result = `Computer wins ! ${computerSelection} beats ${playerSelection}`;
+    else
+      result = `You win ! ${playerSelection} beats ${computerSelection}`;
+  } else result = `${playerSelection} is not a valid choice.`
 
-	return result;
+  return result;
 }
-
-console.log(playRound ('Pezfzef', computerPlay()));
+  
+console.log(playRound ('Rock', computerPlay()));
 
 
 // input from player : R, P or S (case insensitive) (LATER)
