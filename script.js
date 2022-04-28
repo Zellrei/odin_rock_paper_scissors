@@ -4,6 +4,17 @@ function computerPlay () {
   return(computerSelection);
 }
 
+const btnRock = document.getElementById("btnRock");
+const btnPaper = document.getElementById("btnPaper");
+const btnScissors = document.getElementById("btnScissors");
+
+btnRock.addEventListener('click', () => {playRound("rock", computerPlay());});
+btnPaper.addEventListener('click', () => {playRound("paper", computerPlay());});
+btnScissors.addEventListener('click', () => {playRound("scissors", computerPlay());});
+
+
+
+
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = playerSelection.toLowerCase();
@@ -57,7 +68,26 @@ function game() {
   let gameWinner = 'Noone';
   let gameResults = '';
 
-  for (let index = 0; index < 5; index++) {
+// jouer 5 parties :
+/*   for (let index = 0; index < 5; index++) {
+    
+    let playerSelection = prompt(`Rock, Paper, Scissors ?`, `Rock`);
+    if (typeof playerSelection != 'string') playerSelection = 'None';
+    console.log(`Round ${index + 1}`);
+    let roundWinner = playRound (playerSelection, computerPlay());
+    
+    if (roundWinner === 'player') {
+      playerScore++;
+    } else if (roundWinner === 'computer') {
+      computerScore++;
+    } 
+
+    console.log(`Player score is : ${playerScore}`);
+    console.log(`Computer score is : ${computerScore}`);
+    console.log('');
+  } */
+
+  for (let index = 0; index < 1; index++) {
     
     let playerSelection = prompt(`Rock, Paper, Scissors ?`, `Rock`);
     if (typeof playerSelection != 'string') playerSelection = 'None';
@@ -90,8 +120,5 @@ function game() {
   return gameWinner;
 }
 
-game();
-
-
-
+// game();
 

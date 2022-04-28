@@ -1,0 +1,46 @@
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+div {
+  margin: 5px;
+  flex: 1;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  flex: 1;
+}
+
+#global-container {
+  border: 1px solid blueviolet;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#flex-btn-container {
+  display: flex;
+  border: 1px solid green;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#flex-results-container {
+  display: flex;
+  border: 1px solid orangered;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
