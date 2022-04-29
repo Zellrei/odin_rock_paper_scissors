@@ -4,14 +4,6 @@ function computerPlay () {
   return(computerSelection);
 }
 
-const btnRock = document.getElementById("btnRock");
-const btnPaper = document.getElementById("btnPaper");
-const btnScissors = document.getElementById("btnScissors");
-
-btnRock.addEventListener('click', () => {playRound("rock", computerPlay());});
-btnPaper.addEventListener('click', () => {playRound("paper", computerPlay());});
-btnScissors.addEventListener('click', () => {playRound("scissors", computerPlay());});
-
 
 
 
@@ -65,60 +57,49 @@ function playRound(playerSelection, computerSelection) {
 function game() {
   let playerScore = 0;
   let computerScore = 0;
+  let roundWinner = 'Noone';
   let gameWinner = 'Noone';
   let gameResults = '';
 
-// jouer 5 parties :
-/*   for (let index = 0; index < 5; index++) {
-    
-    let playerSelection = prompt(`Rock, Paper, Scissors ?`, `Rock`);
-    if (typeof playerSelection != 'string') playerSelection = 'None';
-    console.log(`Round ${index + 1}`);
-    let roundWinner = playRound (playerSelection, computerPlay());
-    
-    if (roundWinner === 'player') {
+  const btnRock = document.getElementById("btn-rock");
+  const btnPaper = document.getElementById("btn-paper");
+  const btnScissors = document.getElementById("btn-scissors");
+
+  
+
+  
+// jouer en FT5 
+
+  while (playerScore < 5 || computerScore < 5) {
+    btnRock.addEventListener('click', () => {roundWinner = (playRound("rock", computerPlay()))});
+    btnPaper.addEventListener('click', () => {roundWinner = (playRound("paper", computerPlay()))});
+    btnScissors.addEventListener('click', () => {roundWinner = (playRound("scissors", computerPlay()))});
+
+
+    if (roundWinner == 'player') {
       playerScore++;
-    } else if (roundWinner === 'computer') {
+      console.log(playerScore);
+    } else if (roundWinner == 'computer') {
       computerScore++;
-    } 
+      console.log(computerScore);
+    }
 
     console.log(`Player score is : ${playerScore}`);
     console.log(`Computer score is : ${computerScore}`);
     console.log('');
-  } */
 
-  for (let index = 0; index < 1; index++) {
-    
-    let playerSelection = prompt(`Rock, Paper, Scissors ?`, `Rock`);
-    if (typeof playerSelection != 'string') playerSelection = 'None';
-    console.log(`Round ${index + 1}`);
-    let roundWinner = playRound (playerSelection, computerPlay());
-    
-    if (roundWinner === 'player') {
-      playerScore++;
-    } else if (roundWinner === 'computer') {
-      computerScore++;
-    } 
+    if (playerScore == 5) {
+        gameWinner = 'player';
+        gameResults = `Player won with ${playerScore} points !`;
+    } else if (computerScore == 5) {
+        gameWinner = 'computer';
+        gameResults = `Computer won with ${computerScore} points !`;
+    }
 
-    console.log(`Player score is : ${playerScore}`);
-    console.log(`Computer score is : ${computerScore}`);
-    console.log('');
-  }
-
-  if (playerScore > computerScore) {
-      gameWinner = 'player';
-      gameResults = `Player won with ${playerScore} points !`;
-  } else if (playerScore < computerScore) {
-      gameWinner = 'computer';
-      gameResults = `Computer won with ${computerScore} points !`;
-  } else { 
-      gameWinner = 'Noone';
-      gameResults = `Nobody wins, it's a draw !`;
-  }
+    console.log(gameWinner);
 
   console.log(gameResults);
   return gameWinner;
+  }
 }
-
-// game();
-
+game();
