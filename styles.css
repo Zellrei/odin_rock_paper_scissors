@@ -17,10 +17,32 @@ div {
   flex: 1;
 }
 
-button {
-  margin: 5px;
-  padding: 10px;
+#buttons-container {
+  display: flex;
   flex: 1;
+}
+
+#buttons-container > button {
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+button {
+  height: auto;
+  width: 100px;
+  margin: 5px;
+  padding: 15px;
+  flex: 1;
+  font-weight: bold;
+  border: 5px solid;
+  border-radius: 10px;
+  align-self: center;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: aqua;
 }
 
 #global-container {
