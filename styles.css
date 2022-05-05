@@ -12,14 +12,18 @@ body {
   background-color: rgb(246, 255, 255);
 }
 
+
 div {
   margin: 5px;
   flex: 1;
 }
 
-#buttons-container {
-  display: flex;
-  flex: 1;
+h1 {
+  display: table-cell;
+  padding: 0;
+  margin: 0;
+  margin-block-end: 0;
+  height: 100%;
 }
 
 #buttons-container > button {
@@ -32,17 +36,27 @@ button {
   height: auto;
   width: 100px;
   margin: 5px;
-  padding: 15px;
+  padding: 10px;
   flex: 1;
   font-weight: bold;
   border: 5px solid;
   border-radius: 10px;
   align-self: center;
   cursor: pointer;
+  text-align: center;
 }
 
 button:active {
   background-color: aqua;
+}
+
+.btn-emoji {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.btn-subtext {
+  font-size: 1em;
 }
 
 #global-container {
@@ -63,15 +77,20 @@ button:active {
 #flex-btn-container {
   border-radius: 30px;
   display: flex;
-  height: fit-content;
-  flex-grow: 0.3;
+  flex-grow: 0.25;
   flex-direction: column;
   border: 1px solid green;
   min-width: 20vw;
-  padding: 20px;
+  padding: 30px 10px 0 10px ;
+  margin: 0;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+#buttons-container {
+  display: flex;
+  flex: 1;
 }
 
 #flex-results-container {
