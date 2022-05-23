@@ -64,7 +64,7 @@ button:active {
   max-height: 60vh;
   max-width: 60vh;
   min-width: 30vh;
-  border: 1px solid blueviolet;
+  /* border: 1px solid blueviolet; */
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@ button:active {
   display: flex;
   flex-grow: 0.25;
   flex-direction: column;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   min-width: 20vw;
   padding: 30px 10px 0 10px ;
   margin: 0;
@@ -96,7 +96,7 @@ button:active {
 #flex-results-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid orangered;
+  /* border: 1px solid orangered; */
   border-radius: 30px;
   width: inherit;
   min-width: 20vw;
@@ -110,24 +110,44 @@ button:active {
 
 #div-scores-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: rgb(208, 255, 208);
+  flex-direction: column;
+
+  
+
+  background-color: rgb(233, 255, 233);
   border-radius: 30px;
+  min-width: 20vw;
+  min-height: 20vh;
   
 }
 
-#div-scores-container {
-  display: flex;
-  flex-direction: column;
-  
-}
 
 #div-player-computer-results {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
+  align-items: center;
   
+}
+
+#div-player-label-and-score {
+  font-weight: bold;
+}
+
+#div-computer-label-and-score {
+  font-weight: bold;
+}
+
+#div-round-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#div-game-results {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

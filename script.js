@@ -9,18 +9,19 @@ function initializeGame() {
 
   const divPlayerScore = document.getElementById('div-player-score');
   const divComputerScore = document.getElementById('div-computer-score');
-
   const divRoundResults = document.getElementById('div-round-results');
   const divGameResults = document.getElementById('div-game-results');
 
   const btnRock = document.getElementById("btn-rock");
   const btnPaper = document.getElementById("btn-paper");
   const btnScissors = document.getElementById("btn-scissors");
+  const btnResetGame = document.getElementById("btn-reset-game");
 
   btnRock.addEventListener('click', () => {roundWinner = (playRound("rock", computerPlay()))});
   btnPaper.addEventListener('click', () => {roundWinner = (playRound("paper", computerPlay()))});
   btnScissors.addEventListener('click', () => {roundWinner = (playRound("scissors", computerPlay()))});
- 
+  btnResetGame.addEventListener('click', () => resetGame ());
+  
   function playRound(playerSelection, computerSelection) {
     console.log("lancement fonction playRound");
     playerSelection = playerSelection.toLowerCase();
@@ -88,6 +89,18 @@ function initializeGame() {
     }
 
     return winner;
+  }
+
+  function resetGame () {
+    playerScore = 0;
+    computerScore = 0;
+    roundWinner = 'Noone';
+    gameWinner = 'Noone';
+    gameResults = '';
+    divPlayerScore.textContent = "";
+    divComputerScore.textContent = "";
+    divRoundResults.textContent = "";
+    divGameResults.textContent = "";
   }
   
 }
