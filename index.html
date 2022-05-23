@@ -4,10 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
-  <script type="text/javascript" src="script.js"></script>
+    <title>Rock Paper Scissors</title>
+  <link href="styles.css" rel="stylesheet">
+
 </head>
 <body>
-  
+  <div id="global-container">
+    <div id="flex-btn-container">
+      <h1>Rock, Paper, Scissors ?</h1>
+      <div id="buttons-container">
+        <button id="btn-rock" ><span class="btn-emoji">&#9994;</span><span class="btn-subtext">Rock</span></button>
+        <button id="btn-paper"><span class="btn-emoji">&#9995;</span><span class="btn-subtext">Paper</span></button>
+        <button id="btn-scissors"><span class="btn-emoji">&#9996;&#65039;</span><span class="btn-subtext">Scissors</span></button>
+      </div>
+    </div>
+    <div id="flex-results-container">
+      <h2>Results</h2>
+      <div id="div-scores-container">
+        <div id="div-player-computer-results">
+          <div id="div-player-label-and-score">
+            <div id="div-player-label">Player <br>score</div>
+            <div id="div-player-score"></div>
+          </div>
+          <div id="div-computer-label-and-score">
+            <div id="div-computer-label">Computer<br>score</div>
+            <div id="div-computer-score"></div>
+          </div>
+        </div>
+        <div id="div-round-results"></div>
+        <div id="div-game-results"></div>
+      </div>
+    </div>
+    <button id="btn-reset-game">Reset Game</div>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>

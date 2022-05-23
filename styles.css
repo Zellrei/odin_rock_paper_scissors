@@ -1,0 +1,153 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+  background-color: rgb(246, 255, 255);
+}
+
+
+div {
+  margin: 5px;
+  flex: 1;
+}
+
+h1 {
+  display: table-cell;
+  padding: 0;
+  margin: 0;
+  margin-block-end: 0;
+  height: 100%;
+}
+
+#buttons-container > button {
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+button {
+  height: auto;
+  width: 100px;
+  margin: 5px;
+  padding: 10px;
+  flex: 1;
+  font-weight: bold;
+  border: 5px solid;
+  border-radius: 10px;
+  align-self: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:active {
+  background-color: aqua;
+}
+
+.btn-emoji {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.btn-subtext {
+  font-size: 1em;
+}
+
+#global-container {
+  border-radius: 30px;
+  max-height: 60vh;
+  max-width: 60vh;
+  min-width: 30vh;
+  /* border: 1px solid blueviolet; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+}
+
+#flex-btn-container {
+  border-radius: 30px;
+  display: flex;
+  flex-grow: 0.25;
+  flex-direction: column;
+  /* border: 1px solid green; */
+  min-width: 20vw;
+  padding: 30px 10px 0 10px ;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#buttons-container {
+  display: flex;
+  flex: 1;
+}
+
+#flex-results-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid orangered; */
+  border-radius: 30px;
+  width: inherit;
+  min-width: 20vw;
+  padding: 20px;
+  padding-top: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  
+}
+
+#div-scores-container {
+  display: flex;
+  flex-direction: column;
+
+  
+
+  background-color: rgb(233, 255, 233);
+  border-radius: 30px;
+  min-width: 20vw;
+  min-height: 20vh;
+  
+}
+
+
+#div-player-computer-results {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  
+}
+
+#div-player-label-and-score {
+  font-weight: bold;
+}
+
+#div-computer-label-and-score {
+  font-weight: bold;
+}
+
+#div-round-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#div-game-results {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
